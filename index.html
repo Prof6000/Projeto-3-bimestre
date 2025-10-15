@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock Internacional dos Anos 80</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>🎸 Rock Internacional dos Anos 80</h1>
+    <nav class="acessibilidade">
+      <button id="aumentarFonte">A+</button>
+      <button id="diminuirFonte">A-</button>
+      <button id="altoContraste">Alto Contraste</button>
+      <button id="modoLeitura">Modo Leitura</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="intro">
+      <h2>A Revolução do Rock</h2>
+      <p>
+        Os anos 80 foram uma era dourada para o rock. Bandas como Queen, Guns N' Roses, U2,
+        Bon Jovi e AC/DC dominaram as paradas e definiram o som de uma geração. 
+        Com solos de guitarra marcantes, vocais poderosos e shows memoráveis, 
+        o rock internacional viveu seu auge e moldou o cenário musical mundial.
+      </p>
+      <img src="imagens/queen.jpg" alt="Queen em show nos anos 80">
+    </section>
+
+    <section class="bandas">
+      <h2>Bandas Icônicas</h2>
+      <div class="galeria">
+        <div class="card">
+          <img src="imagens/queen.jpg" alt="Queen em show nos anos 80">
+          <h3>Queen</h3>
+          <p>Freddie Mercury e companhia encantaram o mundo com hinos como “We Will Rock You” e “Bohemian Rhapsody”.</p>
+        </div>
+        <div class="card">
+          <img src="imagens/acdc.jpg" alt="Logo do AC/DC">
+          <h3>AC/DC</h3>
+          <p>Com riffs eletrizantes e muita atitude, AC/DC definiu o hard rock dos anos 80.</p>
+        </div>
+        <div class="card">
+          <img src="imagens/guns.jpg" alt="Guns N' Roses ao vivo">
+          <h3>Guns N' Roses</h3>
+          <p>“Sweet Child O’ Mine” e “Paradise City” tornaram o grupo um símbolo do rock rebelde.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="curiosidades">
+      <h2>Curiosidades</h2>
+      <ul>
+        <li>O Live Aid de 1985 reuniu artistas lendários para uma das maiores causas beneficentes da história.</li>
+        <li>Os videoclipes ganharam destaque com o surgimento da MTV em 1981.</li>
+        <li>A estética oitentista trouxe cabelos armados, roupas de couro e muita energia nos palcos.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 - Página criada por fãs do Rock. 🎶</p>
+  </footer>
+
+  <script>
+    const btnAumentar = document.getElementById('aumentarFonte');
+    const btnDiminuir = document.getElementById('diminuirFonte');
+    const btnContraste = document.getElementById('altoContraste');
+    const btnLeitura = document.getElementById('modoLeitura');
+
+    let tamanhoFonte = 100;
+    let contrasteAtivo = false;
+    let leituraAtiva = false;
+
+    btnAumentar.addEventListener('click', () => {
+      tamanhoFonte += 10;
+      document.body.style.fontSize = tamanhoFonte + '%';
+    });
+
+    btnDiminuir.addEventListener('click', () => {
+      tamanhoFonte -= 10;
+      document.body.style.fontSize = tamanhoFonte + '%';
+    });
+
+    btnContraste.addEventListener('click', () => {
+      contrasteAtivo = !contrasteAtivo;
+      document.body.classList.toggle('alto-contraste', contrasteAtivo);
+    });
+
+    btnLeitura.addEventListener('click', () => {
+      leituraAtiva = !leituraAtiva;
+      document.body.classList.toggle('modo-leitura', leituraAtiva);
+    });
+  </script>
+
+</body>
+</html>
